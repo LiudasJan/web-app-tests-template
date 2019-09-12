@@ -1,0 +1,42 @@
+{
+	"src_folders": [
+		"tests"
+	],
+	"output_folder": "reports",
+	"selenium": {
+		"start_process": true,
+		"server_path": "./bin/selenium-server.jar",
+		"log_path": "./reports",
+		"port": 4444,
+		"cli_args": {
+			"webdriver.gecko.driver": "./node_modules/.bin/geckodriver.cmd"
+		}
+	},
+	"test_settings": {
+		"default": {
+			"launch_url": "http://www.qaontime.com",
+			"timeOut": -1,
+			"selenium_port": 4444,
+			"desiredCapabilities": {
+				"browserName": "firefox",
+				"javascriptEnabled": true,
+				"acceptSslCerts": true,
+				"moz:firefoxOptions": {
+					"prefs": {
+						"browser.tabs.remote.autostart": false,
+						"browser.tabs.remote.autostart.2": false
+					},
+					"log": {
+						"level": "trace"
+					},
+					"args": []
+				}
+			},
+			"globals": {
+				"web_url": "http://www.qaontime.com",
+				"api_url": "/",
+				"timeOut": 30000
+			}
+		}
+	}
+}
