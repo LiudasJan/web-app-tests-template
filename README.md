@@ -18,3 +18,5 @@ To run the tests using Nightwatch, do:
 ```sh
 $ npm run test
 ```
+
+![](https://raw.githubusercontent.com/LiudasJan/web-app-tests-template/master/images/nightwatch-test.gif "")
