@@ -13,18 +13,13 @@ module.exports = {
     driver.end();
   },
 
-  'Should be able to contact qaontime team when providing correct data': function (driver) {
-    driver.url(driver.globals.web_url + data.contact.url);
-    //  enter first/last name email and message
-    driver.setValue(data.contact.firstNameField, utils.getRandomName(17));
-    driver.setValue(data.contact.lastNameField, utils.getRandomName(22));
-    driver.setValue(data.contact.emailField, utils.getRandomEmail());
-    driver.setValue(data.contact.messageField, utils.getRandomName(128));
-    driver.click(data.contact.submitButton);
+  'Should be able to open about us page': function (driver) {
+    driver.url(driver.globals.web_url);
+    driver.click(data.home.aboutUsMenu);
 
     // wait and assert success message.
-    driver.waitForElementPresent(data.contact.successMessage, 'Success message pressent.');
-    driver.assert.containsText(data.contact.successMessage, 'Thanks for submitting your information');
+    driver.waitForElementPresent(data.about.headerTitle, 'Header is pressent.');
+    driver.assert.containsText(data.about.headerTitle, 'About');
   },
 
 };
