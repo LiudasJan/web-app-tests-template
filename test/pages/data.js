@@ -1,5 +1,13 @@
 (function () {
   var data = {
+    home: {
+      url: '/',
+      aboutUsMenu: '.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-10'
+    },
+    about: {
+      url: '/about-us',
+      headerTitle: '.entry-header.group'
+    },
     contact: {
       url: '/contact',
       firstNameField: '.smFieldFirstName.smform-control.smform-field-sizelarge.required',
